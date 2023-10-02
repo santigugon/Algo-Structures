@@ -9,6 +9,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+Nav {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  border-bottom: black 2px double;
+  justify-content: space-around;
+  align-items: center;
+}
+
 body {
   font-family: eightBit;
 }
@@ -34,4 +44,11 @@ body {
   position: relative;
   top: -0.14em;
   left: 10px;
+}
+.menu-img {
+  width: auto;
+  height: 100%;
+}
+.user-icon {
+  height: 50%;
 }
