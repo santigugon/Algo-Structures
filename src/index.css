@@ -4,21 +4,25 @@
   src: url(../src/assets/fonts/PixeloidSans-mLxMm.ttf);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-  background: #111;
+  font-family: eightBit;
 }
 .hidden {
   opacity: 0;
 }
 .console-container {
-  font-family: eightBit;
   font-size: 4em;
   text-align: center;
-  height: 200px;
-  width: 600px;
+  height: 40vh;
+  width: 60vw;
   display: block;
   position: absolute;
-  color: white;
+  color: rgb(0, 0, 0);
   top: 0;
   bottom: 0;
   left: 0;
@@ -30,9 +34,4 @@ body {
   position: relative;
   top: -0.14em;
   left: 10px;
-}
-h2 {
-  z-index: 999;
-  color: azure;
-  font-family: eightBit;
 }
