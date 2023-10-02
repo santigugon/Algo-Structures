@@ -3,10 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
   </head>
   <body>
+    <div class="nes-container with-title">
+      <span class="title">Input</span>
+      <label
+        ><input type="radio" class="nes-radio" name="gender" /><span
+          >Male</span
+        ></label
+      >
+      <label
+        ><input type="radio" class="nes-radio" name="gender" /><span
+          >Female</span
+        ></label
+      >
+      <label
+        ><input type="radio" class="nes-radio" name="gender" /><span
+          >Other</span
+        ></label
+      >
+      <br /><br />
+      <label
+        ><input class="nes-checkbox" type="checkbox" /><span
+          >Enable</span
+        ></label
+      >
+    </div>
+
+    <div class="nes-container with-title">
+      <span class="title">Progress</span>
+      <progress class="nes-progress" value="80" max="100"></progress>
+    </div>
+    <div class="nes-container with-title">
+      <span class="title">Text</span>
+      <p>Hello world! This is a sample text. Let's see how NES.CSS works!</p>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
