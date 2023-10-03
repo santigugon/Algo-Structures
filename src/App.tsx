@@ -14,6 +14,25 @@ function App() {
         github="https://github.com/santigugon"
         linkedin="https://www.linkedin.com/in/santiago-gutiérrez-gonzalez-9b7615203/"
         technologies={["C++", "HTML", "CSS", "JS", "PHP"]}
+        email="santigugon@gmail.com"
+      />
+<CreatorCard
+        name="Santiago Gutierrez"
+        description=" Software Engineer student at the Tecnologico de Monterrey Guadalajara. Young enthusiast of learning new technologies and lover of outdoors."
+        imgSrc="https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png"
+        github="https://github.com/santigugon"
+        linkedin="https://www.linkedin.com/in/santiago-gutiérrez-gonzalez-9b7615203/"
+        technologies={["C++", "HTML", "CSS", "JS", "PHP"]}
+        email="santigugon@gmail.com"
+      />
+      <CreatorCard
+        name="Santiago Gutierrez"
+        description=" Software Engineer student at the Tecnologico de Monterrey Guadalajara. Young enthusiast of learning new technologies and lover of outdoors."
+        imgSrc="https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png"
+        github="https://github.com/santigugon"
+        linkedin="https://www.linkedin.com/in/santiago-gutiérrez-gonzalez-9b7615203/"
+        technologies={["C++", "HTML", "CSS", "JS", "PHP"]}
+        email="santigugon@gmail.com"
       />
       {/* // <Intro /> */}
     </>
