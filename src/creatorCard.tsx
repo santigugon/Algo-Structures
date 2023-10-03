@@ -23,6 +23,13 @@ export function CreatorCard({
         <div className="creator-box">
           <img src={imgSrc} alt={`creator image ${name}`} />
         </div>
+        <h2>{name}</h2>
+        {description}
+
+        {technologies.map((tech) => {
+          return <li>{tech}</li>;
+        })}
+
         <div className="creator-icons">
           <a href={github}>
             <i className="nes-icon github is-medium"></i>
@@ -37,7 +44,6 @@ export function CreatorCard({
             <i className="nes-icon linkedin is-medium"></i>
           </a>
         </div>
-        {name} {description} {imgSrc} {github} {linkedin} {technologies} {email}
       </div>
     </div>
   );
