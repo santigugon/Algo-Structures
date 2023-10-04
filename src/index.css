@@ -127,7 +127,9 @@ body {
   position: relative;
   width: 100%;
   height: 50vh;
+  min-height: 300px;
   overflow: hidden;
+  margin-bottom: 5%;
 }
 
 .background-image {
@@ -136,12 +138,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 150%;
-  min-height: 400px;
+
   width: 100%;
   position: absolute;
   z-index: -1;
 }
 .intro-text {
+  margin-top: 4%;
   font-size: 40px;
   -webkit-text-stroke: 0.25px rgb(255, 255, 255);
   text-align: center;
@@ -151,4 +154,18 @@ h2 {
   display: inline;
   background-color: rgba(240, 248, 255, 0.507);
   border: 1px solid black;
+}
+.is-centered {
+  width: 70%;
+  margin: auto auto;
+}
+.is-centered ul {
+  justify-items: left;
+}
+.is-centered ul li {
+  margin: 5px;
+}
+.presentation-bulletpoints {
+  text-align: left;
+  margin-left: 50px;
 }
