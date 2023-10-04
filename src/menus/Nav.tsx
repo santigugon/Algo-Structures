@@ -22,7 +22,7 @@ function NavIcon({ icon, text }: { icon: string; text: string }) {
         src={`../src/assets/img/icons/${icon}-icon.png`}
         alt={`${icon} icon`}
       />
-      <h5 className="nes-pointer">{text}</h5>
+      <h5 className="nes-pointer nav-text">{text}</h5>
     </div>
   );
 }

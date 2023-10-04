@@ -10,6 +10,11 @@
   box-sizing: border-box;
   overflow-x: none;
 }
+:root {
+  --primary-color: rgb(200, 100, 100);
+  --primary-blue: #0000ff;
+}
+
 /* MENUS */
 Nav {
   margin-bottom: 5vh;
@@ -19,6 +24,8 @@ Nav {
   border-bottom: rgba(0, 0, 0, 0.13) 3px solid;
   justify-content: space-around;
   align-items: center;
+  position: sticky;
+  z-index: 999;
 }
 .nav-container {
   justify-items: center;
@@ -34,8 +41,9 @@ Nav {
   bottom: -5px;
   left: 0;
   right: 0;
-  height: 3px;
-  background-color: #000;
+  height: 25px;
+  width: 50px;
+  background-color: #f8f3f3;
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
 }
@@ -52,6 +60,10 @@ Nav {
   height: 40%;
   align-self: center;
 }
+.nav-text:hover {
+  text-decoration: underline var(--primary-color) dotted;
+}
+
 /* GENERAL */
 body {
   font-family: eightBit;
