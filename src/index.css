@@ -225,6 +225,14 @@ h2 {
   object-fit: cover;
   object-position: center;
 }
+.card.locked img:hover {
+  filter: grayscale(100%);
+  /* filter: blur(2px); */
+}
+.card.locked img:hover::after {
+  
+
+}
 .card-text {
   display: flex;
   flex-direction: column;

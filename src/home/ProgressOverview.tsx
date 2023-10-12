@@ -14,7 +14,7 @@ export function SectionCard({
   imgSrc,
 }: SectionCardProps) {
   return (
-    <div className="card">
+    <div className="card locked">
       <h3>
         {" "}
         <title></title>
