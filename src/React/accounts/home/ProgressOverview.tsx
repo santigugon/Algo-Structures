@@ -32,13 +32,13 @@ export function SectionCard({
         <img className="sectionImage" src={imgSrc} alt={title} />
       </div>
       <p>{description}</p>
-      <h5>{progress}</h5>
+      <h5>Your progress:{progress}%</h5>
       <button onClick={onClick}>Click Me</button>
     </div>
   );
 }
 
-export function OverviewContainer() {
+export function SectionsContainer() {
   return (
     <div className="home-overview">
       <div className="cards-container">
@@ -51,7 +51,24 @@ export function OverviewContainer() {
           }}
           imgSrc="https://www.freecodecamp.org/news/content/images/2022/11/laptop-gfe4d4bfc0_1280.png"
         />
-        ;
+        <SectionCard
+          title="Algorithms"
+          description="Discover the most interesting algorithms, from searching to sorting"
+          progress={100}
+          onClick={function () {
+            console.log("Clicked");
+          }}
+          imgSrc="https://www.freecodecamp.org/news/content/images/2022/11/laptop-gfe4d4bfc0_1280.png"
+        />
+        <SectionCard
+          title="Algorithms"
+          description="Discover the most interesting algorithms, from searching to sorting"
+          progress={100}
+          onClick={function () {
+            console.log("Clicked");
+          }}
+          imgSrc="https://www.freecodecamp.org/news/content/images/2022/11/laptop-gfe4d4bfc0_1280.png"
+        />
       </div>
     </div>
   );

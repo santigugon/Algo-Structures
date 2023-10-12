@@ -196,9 +196,28 @@ h2 {
 
 .avatar-img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-width: 100px;
   object-fit: cover;
   object-position: center;
+}
+.account-overview {
+  display: flex;
+  column-gap: 7.5%;
+  margin-top: 5%;
+}
+
+.account-overview .info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: [y] 50px [x] 50px [x] 50px [y] 50px [x] 50px [x]; */
+  align-items: center;
+}
+.account-overview .info p {
+  margin: 0;
+}
+.account-overview .info .item:nth-child(2) {
+  grid-row: 2 / span x 2;
 }
 
 /* HOME*/
@@ -212,6 +231,9 @@ h2 {
   width: 100%;
 }
 .card {
+  padding: 1%;
+  border-radius: 2%;
+  border: black 1px solid;
   width: 100%;
   height: auto;
   overflow: hidden;

@@ -1,13 +1,12 @@
 interface AvatarProps {
   name: string;
   src: string;
-  alt: string;
 }
 
-export function Avatar({ name, src, alt }: AvatarProps) {
+export function Avatar({ name, src }: AvatarProps) {
   return (
     <div className="avatar">
-      <img className="avatar-name" src={src} alt={alt} />
+      <img className="avatar-img" src={src} alt={name} />
       <div className="text-sm">
         <p className="text-gray-900 leading-none">{name}</p>
       </div>

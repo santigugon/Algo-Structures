@@ -1,5 +1,5 @@
-import { OverviewContainer } from "./ProgressOverview";
-
+import { SectionsContainer } from "./ProgressOverview";
+import { AccountOverview } from "../Account/AccountOverview";
 export function Summary() {
   return (
     <div className="nes-container with-title is-centered">
@@ -46,7 +46,8 @@ export function Summary() {
         learning and fun. Are you ready to level up your coding skills? Let's
         embark on this adventure together!
       </p>
-      <OverviewContainer />;
+      <SectionsContainer />
+      <AccountOverview />
     </div>
   );
 }
