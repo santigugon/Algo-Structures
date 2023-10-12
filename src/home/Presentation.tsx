@@ -1,3 +1,5 @@
+import { OverviewContainer } from "./ProgressOverview";
+
 export function Summary() {
   return (
     <div className="nes-container with-title is-centered">
@@ -37,11 +39,14 @@ export function Summary() {
         </ul>
       </div>
       <br />
-      Join us in this exciting quest to become a master of algorithms and data
-      structures. Whether you're a coding enthusiast, a student, or a
-      professional developer, AlgoStructures welcomes you to a world of learning
-      and fun. Are you ready to level up your coding skills? Let's embark on
-      this adventure together!{" "}
+      <p>
+        Join us in this exciting quest to become a master of algorithms and data
+        structures. Whether you're a coding enthusiast, a student, or a
+        professional developer, AlgoStructures welcomes you to a world of
+        learning and fun. Are you ready to level up your coding skills? Let's
+        embark on this adventure together!
+      </p>
+      <OverviewContainer />;
     </div>
   );
 }

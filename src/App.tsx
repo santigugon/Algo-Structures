@@ -3,6 +3,7 @@
 import { NavMenu } from "./menus/Nav.tsx";
 import { Summary } from "./home/Presentation.tsx";
 import { Intro } from "./home/Intro.tsx";
+
 function App() {
   // const creators = [
   //   {
@@ -35,6 +36,7 @@ function App() {
       <NavMenu />
       <Intro />
       <Summary />
+
       {/* <CreatorCards creators={creators} /> */}
       {/* // <Intro /> */}
     </>
