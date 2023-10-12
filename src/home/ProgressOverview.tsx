@@ -1,3 +1,4 @@
+import { useState } from "react";
 interface SectionCardProps {
   title: string;
   description: string;
@@ -13,13 +14,23 @@ export function SectionCard({
   onClick,
   imgSrc,
 }: SectionCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="card locked">
+    <div
+      className={`card locked ${isHovered ? "hovered" : ""}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="lock-icon">
+        <img src="../src/assets/img/icons/lock-icon.png" alt="lock" />
+      </div>
       <h3>
         {" "}
         <title></title>
       </h3>
-      <img src={imgSrc} alt={title} />
+      <div className="sectionImage-container">
+        <img className="sectionImage" src={imgSrc} alt={title} />
+      </div>
       <p>{description}</p>
       <h5>{progress}</h5>
       <button onClick={onClick}>Click Me</button>

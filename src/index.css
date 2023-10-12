@@ -258,3 +258,40 @@ h2 {
 .card-text h3 {
   margin-bottom: 10px;
 }
+.card.locked .lock-icon {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: white;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.lock-icon img {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  z-index: 250;
+}
+.lock-icon img:hover {
+  filter: none !important;
+}
+.card.locked .sectionImage-container:hover + .lock-icon {
+  opacity: 1;
+}
+.card.locked.hovered .lock-icon {
+  opacity: 1;
+  transition: 0.1s;
+}
+.card.locked.hovered .lock-icon img {
+  filter: none !important;
+}
+.card.locked.hovered img {
+  filter: grayscale(100%);
+  transition: 0.1s;
+}
