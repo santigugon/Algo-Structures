@@ -218,8 +218,10 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 .card img {
+  position: relative;
   height: auto;
   max-width: 100%;
   object-fit: cover;
@@ -229,10 +231,23 @@ h2 {
   filter: grayscale(100%);
   /* filter: blur(2px); */
 }
-.card.locked img:hover::after {
-  
-
+.card.locked img::before {
+  content: "🔒"; /* You can use any lock icon you prefer */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
+
 .card-text {
   display: flex;
   flex-direction: column;
