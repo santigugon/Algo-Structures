@@ -1,7 +1,7 @@
 {
-  "homepage": "https:/santigugon.github.io/Algo-Structures",
+  "homepage": "https://santigugon.github.io/Algo-Structures",
   "name": "react",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
