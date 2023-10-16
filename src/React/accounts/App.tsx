@@ -36,14 +36,13 @@ function App() {
       <NavMenu />
       <Intro />
       <Summary />
-
       {/* <CreatorCards creators={creators} /> */}
-      {/* // <Intro /> */}
+      {/* <VisualIntro /> */}
     </>
   );
 }
 
-// function Intro() {
+// function VisualIntro() {
 //   // function([string1, string2],target id,[color1,color2])
 
 //   useEffect(() => {
