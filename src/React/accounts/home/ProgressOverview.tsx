@@ -70,6 +70,15 @@ export function SectionsContainer() {
           imgSrc="https://www.freecodecamp.org/news/content/images/2022/11/laptop-gfe4d4bfc0_1280.png"
         />
       </div>
+      <SectionCard
+        title="Big O Notation"
+        description="Read this introductory lesson to big = notation and learn how to analyze the performance of your algorithms."
+        progress={100}
+        onClick={function () {
+          console.log("Clicked");
+        }}
+        imgSrc="https://media.geeksforgeeks.org/wp-content/uploads/20210315032119/Untitled-300x229.png"
+      />
     </div>
   );
 }
