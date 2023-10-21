@@ -317,3 +317,7 @@ h2 {
   filter: grayscale(100%);
   transition: 0.1s;
 }
+
+button:hover {
+  background-color: var(--primary-color);
+}

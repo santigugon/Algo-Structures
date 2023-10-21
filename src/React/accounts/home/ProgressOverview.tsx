@@ -5,6 +5,7 @@ interface SectionCardProps {
   progress: number;
   onClick: () => void;
   imgSrc: string;
+  locked: boolean;
 }
 
 export function SectionCard({
@@ -13,19 +14,25 @@ export function SectionCard({
   progress,
   onClick,
   imgSrc,
+  locked,
 }: SectionCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
-      className={`card locked ${isHovered ? "hovered" : ""}`}
+      className={`card ${locked ? "locked" : ""} ${
+        isHovered ? " hovered" : ""
+      }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="lock-icon">
-        <img src="../src/assets/img/icons/lock-icon.png" alt="lock" />
-      </div>
+      {locked ? (
+        <div className="lock-icon">
+          <img src="../src/assets/img/icons/lock-icon.png" alt="lock" />
+        </div>
+      ) : (
+        ""
+      )}
       <h3>
-        {" "}
         <title></title>
       </h3>
       <div className="sectionImage-container">
@@ -49,35 +56,39 @@ export function SectionsContainer() {
           onClick={function () {
             console.log("Clicked");
           }}
-          imgSrc="https://www.freecodecamp.org/news/content/images/2022/11/laptop-gfe4d4bfc0_1280.png"
+          locked={true}
+          imgSrc="../src/assets/img/portraits/algorithms.png"
         />
         <SectionCard
           title="Algorithms"
-          description="Discover the most interesting algorithms, from searching to sorting"
+          description="Learn about the most important data structures, from arrays to binary search trees"
           progress={100}
           onClick={function () {
             console.log("Clicked");
           }}
-          imgSrc="https://www.freecodecamp.org/news/content/images/2022/11/laptop-gfe4d4bfc0_1280.png"
+          locked={true}
+          imgSrc="../src/assets/img/portraits/datastructure.png"
         />
         <SectionCard
           title="Algorithms"
-          description="Discover the most interesting algorithms, from searching to sorting"
+          description=" the most interesting algorithms, from searching to sorting"
           progress={100}
           onClick={function () {
             console.log("Clicked");
           }}
-          imgSrc="https://www.freecodecamp.org/news/content/images/2022/11/laptop-gfe4d4bfc0_1280.png"
+          locked={true}
+          imgSrc="../src/assets/img/portraits/storymode.png"
         />
       </div>
       <SectionCard
         title="Big O Notation"
-        description="Read this introductory lesson to big = notation and learn how to analyze the performance of your algorithms."
-        progress={100}
+        description="Read this introductory lesson to big O notation and learn how to analyze the performance of your algorithms."
+        progress={0}
         onClick={function () {
           console.log("Clicked");
         }}
-        imgSrc="https://media.geeksforgeeks.org/wp-content/uploads/20210315032119/Untitled-300x229.png"
+        locked={false}
+        imgSrc="../src/assets/img/portraits/bigOnotation.png"
       />
     </div>
   );
