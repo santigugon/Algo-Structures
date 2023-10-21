@@ -240,6 +240,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 .card img {
@@ -316,6 +317,11 @@ h2 {
 .card.locked.hovered img {
   filter: grayscale(100%);
   transition: 0.1s;
+}
+.card progress {
+  width: 50%;
+  margin: 15px auto;
+  border-image-repeat: stretch;
 }
 
 button:hover {

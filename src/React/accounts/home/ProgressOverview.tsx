@@ -40,6 +40,18 @@ export function SectionCard({
       </div>
       <p>{description}</p>
       <h5>Your progress:{progress}%</h5>
+      <progress
+        className={`nes-progress ${
+          progress > 90
+            ? "is-success"
+            : progress > 50
+            ? "is-warning"
+            : "is-error"
+        }`}
+        value={progress}
+        max="100"
+      ></progress>
+
       <button onClick={onClick}>Click Me</button>
     </div>
   );
@@ -62,7 +74,7 @@ export function SectionsContainer() {
         <SectionCard
           title="Algorithms"
           description="Learn about the most important data structures, from arrays to binary search trees"
-          progress={100}
+          progress={70}
           onClick={function () {
             console.log("Clicked");
           }}
@@ -72,7 +84,7 @@ export function SectionsContainer() {
         <SectionCard
           title="Algorithms"
           description=" the most interesting algorithms, from searching to sorting"
-          progress={100}
+          progress={30}
           onClick={function () {
             console.log("Clicked");
           }}
