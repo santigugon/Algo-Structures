@@ -327,3 +327,6 @@ h2 {
 button:hover {
   background-color: var(--primary-color);
 }
+.big-o-notation {
+  height: 15vh;
+}

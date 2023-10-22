@@ -21,7 +21,7 @@ export function SectionCard({
     <div
       className={`card ${locked ? "locked" : ""} ${
         isHovered ? " hovered" : ""
-      }`}
+      } ${title === "Big O Notation" ? "big-o-notation" : ""}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -36,7 +36,7 @@ export function SectionCard({
         <title></title>
       </h3>
       <div className="sectionImage-container">
-        <img className="sectionImage" src={imgSrc} alt={title} />
+        <img className={`sectionImage `} src={imgSrc} alt={title} />
       </div>
       <p>{description}</p>
       <h5>Your progress:{progress}%</h5>
