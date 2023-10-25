@@ -2,8 +2,8 @@ export function NavMenu() {
   return (
     <nav>
       <img
-        src="../src/assets/img/algostructures.png"
-        alt="menu"
+        src="/img/algostructures.png"
+        alt="/img/algostructures.png"
         className="menu-img nes-pointer"
       />
 
@@ -19,7 +19,7 @@ function NavIcon({ icon, text }: { icon: string; text: string }) {
     <div className="nav-container" id={`${text.toLowerCase()}-container`}>
       <img
         className="user-icon nes-pointer"
-        src={`../src/assets/img/icons/${icon}-icon.png`}
+        src={`/img/icons/${icon}-icon.png`}
         alt={`${icon} icon`}
       />
       <h5 className="nes-pointer nav-text">{text}</h5>
