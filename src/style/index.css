@@ -328,5 +328,8 @@ button:hover {
   background-color: var(--primary-color);
 }
 .big-o-notation {
-  height: 15vh;
+  height: 100%;
+}
+.big-o-notation img:hover {
+  transform: scale(1.07cd A);
 }

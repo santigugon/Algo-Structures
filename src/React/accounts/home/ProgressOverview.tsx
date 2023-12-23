@@ -27,7 +27,7 @@ export function SectionCard({
     >
       {locked ? (
         <div className="lock-icon">
-          <img src="../src/assets/img/icons/lock-icon.png" alt="lock" />
+          <img src="/img/icons/lock-icon.png" alt="lock" />
         </div>
       ) : (
         ""
@@ -69,7 +69,7 @@ export function SectionsContainer() {
             console.log("Clicked");
           }}
           locked={true}
-          imgSrc="../src/assets/img/portraits/algorithms.png"
+          imgSrc="/img/portraits/algorithms.png"
         />
         <SectionCard
           title="Algorithms"
@@ -79,7 +79,7 @@ export function SectionsContainer() {
             console.log("Clicked");
           }}
           locked={true}
-          imgSrc="../src/assets/img/portraits/datastructure.png"
+          imgSrc="/img/portraits/datastructure.png"
         />
         <SectionCard
           title="Algorithms"
@@ -89,7 +89,7 @@ export function SectionsContainer() {
             console.log("Clicked");
           }}
           locked={true}
-          imgSrc="../src/assets/img/portraits/storymode.png"
+          imgSrc="/img/portraits/storymode.png"
         />
       </div>
       <SectionCard
@@ -100,7 +100,7 @@ export function SectionsContainer() {
           console.log("Clicked");
         }}
         locked={false}
-        imgSrc="../src/assets/img/portraits/bigOnotation.png"
+        imgSrc="/img/portraits/bigOnotation.png"
       />
     </div>
   );

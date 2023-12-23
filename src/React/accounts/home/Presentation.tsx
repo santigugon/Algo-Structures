@@ -48,6 +48,11 @@ export function Summary() {
       </p>
       <SectionsContainer />
       <AccountOverview />
+      <footer>
+        <p>
+          Algostructures is a learning project no commercial use is intended.
+        </p>
+      </footer>
     </div>
   );
 }
