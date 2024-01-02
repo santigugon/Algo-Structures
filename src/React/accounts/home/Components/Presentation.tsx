@@ -1,5 +1,5 @@
 import { SectionsContainer } from "./ProgressOverview";
-import { AccountOverview } from "../Account/AccountOverview";
+import { AccountOverview } from "../../Account/AccountOverview";
 export function Summary() {
   return (
     <div className="nes-container with-title is-centered">

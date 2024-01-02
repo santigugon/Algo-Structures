@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function NavMenu() {
   return (
     <nav>
@@ -8,6 +10,7 @@ export function NavMenu() {
       />
 
       <NavIcon icon="home" text="Home" />
+
       <NavIcon icon="users" text="Account" />
       <NavIcon icon="more" text="More" />
     </nav>
@@ -16,13 +19,19 @@ export function NavMenu() {
 
 function NavIcon({ icon, text }: { icon: string; text: string }) {
   return (
-    <div className="nav-container" id={`${text.toLowerCase()}-container`}>
+    <Link
+      to={`/home`}
+      className="nav-container"
+      id={`${text.toLowerCase()}-container`}
+    >
       <img
         className="user-icon nes-pointer"
         src={`/img/icons/${icon}-icon.png`}
         alt={`${icon} icon`}
       />
-      <h5 className="nes-pointer nav-text">{text}</h5>
-    </div>
+      <h5 className="nes-pointer nav-text" style={{ color: "black" }}>
+        {text}
+      </h5>
+    </Link>
   );
 }

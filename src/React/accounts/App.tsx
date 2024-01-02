@@ -1,45 +1,24 @@
 // import { useEffect } from "react";
 // import { CreatorCards } from "./creatorCard.tsx";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { NavMenu } from "./menus/Nav.tsx";
-import { Summary } from "./home/Presentation.tsx";
-import { Intro } from "./home/Intro.tsx";
+import { Home } from "./home/Home.tsx";
 
 function App() {
-  // const creators = [
-  //   {
-  //     name: "Juan",
-  //     description: "Full Stack Developer",
-  //     imgSrc:
-  //       "https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2022/07/mario-bros-png-sin-fondo.png?w=800&ssl=1",
-  //     github: "https://github.com/santigugon",
-  //     linkedin:
-  //       "https://www.linkedin.com/in/santiago-gutiérrez-gonzalez-9b7615203/",
-  //     email: "santigugon@gmail.com",
-  //     technologies: ["JS", "CSS", "PHP", "HTML", " NODEJS", " REACT"],
-  //   },
-  //   {
-  //     name: "Santiago",
-  //     description:
-  //       "Full Stack Developer, the story of my life is that I have always loved to program every day no matter what ",
-  //     imgSrc:
-  //       "https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen-1200x675.jpg",
-  //     github: "https://github.com/santigugon",
-  //     linkedin:
-  //       "https://www.linkedin.com/in/santiago-gutiérrez-gonzalez-9b7615203/",
-  //     email: "santigugon@gmail.com",
-  //     technologies: ["JS", "CSS", "PHP", "HTML", " NODEJS", " REACT"],
-  //   },
-  // ];
-  // const [count, setCount] = useState(0);
   return (
-    <>
+    <BrowserRouter>
       <NavMenu />
-      <Intro />
-      <Summary />
-      {/* <CreatorCards creators={creators} /> */}
-      {/* <VisualIntro /> */}
-    </>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
+}
+{
+  /* <CreatorCards creators={creators} /> */
+}
+{
+  /* <VisualIntro /> */
 }
 
 // function VisualIntro() {
