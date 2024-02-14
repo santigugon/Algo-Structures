@@ -3,6 +3,7 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { NavMenu } from "./menus/Nav.tsx";
 import { Home } from "./home/Home.tsx";
+import { Algorithms } from "./algorithms/Algorithms.tsx";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <NavMenu />
       <Routes>
         <Route path="/home" element={<Home />} />
+        <Route path="/algorithms" element={<Algorithms />} />
       </Routes>
     </BrowserRouter>
   );

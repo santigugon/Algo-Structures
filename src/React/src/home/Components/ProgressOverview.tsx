@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 interface SectionCardProps {
   title: string;
   description: string;
@@ -18,42 +20,44 @@ export function SectionCard({
 }: SectionCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div
-      className={`card ${locked ? "locked" : ""} ${
-        isHovered ? " hovered" : ""
-      } ${title === "Big O Notation" ? "big-o-notation" : ""}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {locked ? (
-        <div className="lock-icon">
-          <img src="/img/icons/lock-icon.png" alt="lock" />
+    <Link to={`/algorithms`}>
+      <div
+        className={`card ${locked ? "locked" : ""} ${
+          isHovered ? " hovered" : ""
+        } ${title === "Big O Notation" ? "big-o-notation" : ""}`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {locked ? (
+          <div className="lock-icon">
+            <img src="/img/icons/lock-icon.png" alt="lock" />
+          </div>
+        ) : (
+          ""
+        )}
+        <h3>
+          <title></title>
+        </h3>
+        <div className="sectionImage-container">
+          <img className={`sectionImage `} src={imgSrc} alt={title} />
         </div>
-      ) : (
-        ""
-      )}
-      <h3>
-        <title></title>
-      </h3>
-      <div className="sectionImage-container">
-        <img className={`sectionImage `} src={imgSrc} alt={title} />
-      </div>
-      <p>{description}</p>
-      <h5>Your progress:{progress}%</h5>
-      <progress
-        className={`nes-progress ${
-          progress > 90
-            ? "is-success"
-            : progress > 50
-            ? "is-warning"
-            : "is-error"
-        }`}
-        value={progress}
-        max="100"
-      ></progress>
+        <p>{description}</p>
+        <h5>Your progress:{progress}%</h5>
+        <progress
+          className={`nes-progress ${
+            progress > 90
+              ? "is-success"
+              : progress > 50
+              ? "is-warning"
+              : "is-error"
+          }`}
+          value={progress}
+          max="100"
+        ></progress>
 
-      <button onClick={onClick}>Click Me</button>
-    </div>
+        <button onClick={onClick}>Click Me</button>
+      </div>
+    </Link>
   );
 }
 
