@@ -20,7 +20,9 @@ export function Level({ img, name }: LevelProps) {
             style={{
               backgroundImage: `url("https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"})`,
             }}
-          ></li>
+          >
+            ${index}
+          </li>
         ))}
       </ul>
     </>
