@@ -1,5 +1,7 @@
-import { Summary } from "./Components/Presentation.tsx";
-import { Intro } from "./Components/Intro.tsx";
+// import { Summary } from "./Components/Presentation.tsx";
+// import { Intro } from "./Components/Intro.tsx";
+
+import { VisualIntro } from "./Components/visualIntro.tsx";
 
 export function Home() {
   // const creators = [
@@ -30,10 +32,16 @@ export function Home() {
   // const [count, setCount] = useState(0);
   return (
     <>
-      <Intro />
-      <Summary />
+      {/* <Intro /> */}
+      {/* <Summary /> */}
       {/* <CreatorCards creators={creators} /> */}
-      {/* <VisualIntro /> */}
+      <div className="under-construction">
+        Currently under construction await for the official Launch in March 2024
+        in the Algoritmia club or contact santigugon@gmail.com if you want to be
+        part of the project
+        <img src="../../assets/imgs/Logo.webp" alt="" />
+      </div>
+      <VisualIntro />
     </>
   );
 }

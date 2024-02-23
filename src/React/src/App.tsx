@@ -1,14 +1,14 @@
 // import { useEffect } from "react";
 // import { CreatorCards } from "./creatorCard.tsx";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { NavMenu } from "./menus/Nav.tsx";
-import { Home } from "./home/Home.tsx";
+// import { NavMenu } from "./menus/Nav.tsx";
 import { Algorithms } from "./algorithms/Algorithms.tsx";
+import { Home } from "./home/Home.tsx";
 
 function App() {
   return (
     <BrowserRouter>
-      <NavMenu />
+      {/* <NavMenu /> */}
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/algorithms" element={<Algorithms />} />

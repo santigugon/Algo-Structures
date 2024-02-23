@@ -333,3 +333,18 @@ button:hover {
 .big-o-notation img:hover {
   transform: scale(1.07);
 }
+
+/* Underconstrucion */
+.under-construction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.under-construction img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
