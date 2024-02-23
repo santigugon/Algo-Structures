@@ -39,7 +39,6 @@ export function Home() {
         Currently under construction await for the official Launch in March 2024
         in the Algoritmia club or contact santigugon@gmail.com if you want to be
         part of the project
-        <img src="../../assets/imgs/Logo.webp" alt="" />
       </div>
       <VisualIntro />
     </>
