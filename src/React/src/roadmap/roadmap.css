@@ -18,21 +18,31 @@
   width: 50vw;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-}
 
+  flex-flow: row wrap;
+  margin-bottom: 250px;
+}
+.container-roadmap {
+  position: relative;
+
+  transform-style: preserve-3d;
+  transform: rotateX(10deg);
+  z-index: 1;
+}
+.container-roadmap:hover {
+  transform: rotateX(0deg);
+  z-index: 20;
+}
 .ul-roadmap {
   position: relative;
   width: 100px;
   height: 100px;
-  margin: 0.5em;
   perspective-origin: center center;
-  transform-style: preserve-3d;
-  transform: rotateX(40deg);
-  transition: all 0.4s;
+  margin: 0.5em;
   border: solid black 5px;
+  transition: all 0.4s;
   background-image: url("https://static.vecteezy.com/system/resources/thumbnails/011/458/147/small/8-bit-pixels-hero-avatar-game-character-in-illustration-vector.jpg");
+  z-index: 1;
 }
 .ul-roadmap::before {
   content: "";
@@ -179,4 +189,19 @@ ul .li-roadmap {
 .li-roadmap {
   text-indent: 999px;
   overflow: hidden;
+}
+.ul-title {
+  font-size: 15px;
+  position: absolute;
+  bottom: -75%;
+}
+
+.align-start {
+  align-self: flex-start;
+}
+.align-center {
+  align-self: center;
+}
+.align-end {
+  align-self: flex-end;
 }

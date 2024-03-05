@@ -11,114 +11,33 @@ export function Test() {
           <Level
             name="MergeSort"
             img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
+            relevance={1}
           />
           <Level
             name="MergeSort"
             img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
+            relevance={2}
           />
           <Level
             name="MergeSort"
             img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
+            relevance={4}
           />
-          <ul className="ul-roadmap">
-            <li className="li-roadmap">A</li>
-            <li className="li-roadmap">B</li>
-            <li className="li-roadmap">C</li>
-            <li className="li-roadmap">D</li>
-            <li className="li-roadmap">E</li>
-            <li className="li-roadmap">6</li>
-            <li className="li-roadmap">7</li>
-            <li className="li-roadmap">8</li>
-            <li className="li-roadmap">9</li>
-          </ul>
-          <ul className="ul-roadmap">
-            <li className="li-roadmap">A</li>
-            <li className="li-roadmap">B</li>
-            <li className="li-roadmap">C</li>
-            <li className="li-roadmap">D</li>
-            <li className="li-roadmap">E</li>
-            <li className="li-roadmap">6</li>
-            <li className="li-roadmap">7</li>
-            <li className="li-roadmap">8</li>
-            <li className="li-roadmap">9</li>
-          </ul>
-          <ul className="ul-roadmap">
-            <li className="li-roadmap">A</li>
-            <li className="li-roadmap">B</li>
-            <li className="li-roadmap">C</li>
-            <li className="li-roadmap">D</li>
-            <li className="li-roadmap">E</li>
-            <li className="li-roadmap">6</li>
-            <li className="li-roadmap">7</li>
-            <li className="li-roadmap">8</li>
-            <li className="li-roadmap">9</li>
-          </ul>
-          <ul className="ul-roadmap">
-            <li className="li-roadmap">A</li>
-            <li className="li-roadmap">B</li>
-            <li className="li-roadmap">C</li>
-            <li className="li-roadmap">D</li>
-            <li className="li-roadmap">E</li>
-            <li className="li-roadmap">6</li>
-            <li className="li-roadmap">7</li>
-            <li className="li-roadmap">8</li>
-            <li className="li-roadmap">9</li>
-          </ul>
-          <ul className="ul-roadmap">
-            <li className="li-roadmap">A</li>
-            <li className="li-roadmap">B</li>
-            <li className="li-roadmap">C</li>
-            <li className="li-roadmap">D</li>
-            <li className="li-roadmap">E</li>
-            <li className="li-roadmap">6</li>
-            <li className="li-roadmap">7</li>
-            <li className="li-roadmap">8</li>
-            <li className="li-roadmap">9</li>
-          </ul>
-          <ul className="ul-roadmap">
-            <li className="li-roadmap">A</li>
-            <li className="li-roadmap">B</li>
-            <li className="li-roadmap">C</li>
-            <li className="li-roadmap">D</li>
-            <li className="li-roadmap">E</li>
-            <li className="li-roadmap">6</li>
-            <li className="li-roadmap">7</li>
-            <li className="li-roadmap">8</li>
-            <li className="li-roadmap">9</li>
-          </ul>
-          <ul className="ul-roadmap">
-            <li className="li-roadmap">A</li>
-            <li className="li-roadmap">B</li>
-            <li className="li-roadmap">C</li>
-            <li className="li-roadmap">D</li>
-            <li className="li-roadmap">E</li>
-            <li className="li-roadmap">6</li>
-            <li className="li-roadmap">7</li>
-            <li className="li-roadmap">8</li>
-            <li className="li-roadmap">9</li>
-          </ul>
-          <ul className="ul-roadmap">
-            <li className="li-roadmap">A</li>
-            <li className="li-roadmap">B</li>
-            <li className="li-roadmap">C</li>
-            <li className="li-roadmap">D</li>
-            <li className="li-roadmap">E</li>
-            <li className="li-roadmap">6</li>
-            <li className="li-roadmap">7</li>
-            <li className="li-roadmap">8</li>
-            <li className="li-roadmap">9</li>
-          </ul>
-          <ul className="ul-roadmap">
-            <li className="li-roadmap"></li>
-            <li className="li-roadmap"></li>
-            <li className="li-roadmap"></li>
-            <li className="li-roadmap"></li>
-            <li className="li-roadmap"></li>
-            <li className="li-roadmap"></li>
-            <li className="li-roadmap"></li>
-            <li className="li-roadmap"></li>
-            <li className="li-roadmap"></li>
-          </ul>
+          <Level
+            name="MergeSort"
+            img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
+            relevance={2}
+          />
+          <Level
+            name="MergeSort"
+            img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
+            relevance={1}
+          />
+          <Level
+            name="MergeSort"
+            img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
+            relevance={3}
+          />
         </div>
       </div>
     </>
