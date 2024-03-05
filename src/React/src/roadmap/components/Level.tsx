@@ -6,23 +6,13 @@ interface LevelProps {
 export function Level({ img, name }: LevelProps) {
   return (
     <>
-      <ul
-        style={{
-          position: "relative",
-          width: "120px",
-          height: "80px",
-          margin: "0.1em",
-          perspectiveOrigin: "center center",
-          transformStyle: "preserve-3d",
-          transform: "rotateX(40deg)",
-          transition: "all 0.4s",
-        }}
-      >
+      <ul className="ul-roadmap" style={{}}>
         {name}
 
         {Array.from({ length: 9 }, (_, index) => (
           <li
             key={index}
+            className={`li-roadmap li-${index}`}
             style={{
               position: "absolute",
               left:
@@ -64,7 +54,7 @@ export function Level({ img, name }: LevelProps) {
                   : index === 3
                   ? "left center"
                   : index === 4
-                  ? "center top"
+                  ? "center bottom"
                   : index === 5
                   ? "right bottom"
                   : index === 6
@@ -75,6 +65,8 @@ export function Level({ img, name }: LevelProps) {
               transform:
                 index === 0
                   ? "none"
+                  : index === 1
+                  ? ""
                   : index === 2
                   ? "rotateX(-180deg)"
                   : index === 3
@@ -87,7 +79,7 @@ export function Level({ img, name }: LevelProps) {
                   ? "left bottom"
                   : index === 7
                   ? "left top"
-                  : "none",
+                  : "",
               width: "100%",
               height: "100%",
               transition: "transform 0.3s, filter 1s",
