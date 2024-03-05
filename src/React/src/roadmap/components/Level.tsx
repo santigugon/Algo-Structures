@@ -7,7 +7,7 @@ export function Level({ img, name }: LevelProps) {
   return (
     <>
       <ul className="ul-roadmap" style={{}}>
-        {name}
+        <p className="ul-title">{name}</p>
 
         {Array.from({ length: 9 }, (_, index) => (
           <li
@@ -62,24 +62,7 @@ export function Level({ img, name }: LevelProps) {
                   : index === 7
                   ? "left top"
                   : "none",
-              transform:
-                index === 0
-                  ? "none"
-                  : index === 1
-                  ? ""
-                  : index === 2
-                  ? "rotateX(-180deg)"
-                  : index === 3
-                  ? "left center"
-                  : index === 4
-                  ? "center top"
-                  : index === 5
-                  ? "right bottom"
-                  : index === 6
-                  ? "left bottom"
-                  : index === 7
-                  ? "left top"
-                  : "",
+
               width: "100%",
               height: "100%",
               transition: "transform 0.3s, filter 1s",

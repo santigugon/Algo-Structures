@@ -12,6 +12,14 @@ export function Test() {
             name="MergeSort"
             img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
           />
+          <Level
+            name="MergeSort"
+            img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
+          />
+          <Level
+            name="MergeSort"
+            img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
+          />
           <ul className="ul-roadmap">
             <li className="li-roadmap">A</li>
             <li className="li-roadmap">B</li>
