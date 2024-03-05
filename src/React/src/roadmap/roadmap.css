@@ -1,9 +1,5 @@
-html,
-body {
+.roadMap-body {
   min-height: 100vh;
-}
-
-body {
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
@@ -17,7 +13,7 @@ body {
   margin: 4em;
 }
 
-.gallery {
+.roadMap-gallery {
   perspective: 700px;
   width: 50vw;
   display: flex;
