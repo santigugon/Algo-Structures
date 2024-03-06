@@ -205,3 +205,6 @@ ul .li-roadmap {
 .align-end {
   align-self: flex-end;
 }
+.align-start {
+  align-self: flex-start;
+}
