@@ -1,12 +1,14 @@
 import "./roadmap.css";
 import { Level } from "./components/Level";
 
-export function Test() {
+export function RoadMap() {
   return (
     <>
       <div className="roadMap-body">
         <h1>Algo-Structures</h1>
-        <div className="title">Algorithms</div>
+        <div className="title">
+          <h1>Algorithms</h1>
+        </div>
         <div className="roadMap-gallery">
           <Level
             name="MergeSort"

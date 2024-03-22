@@ -1,10 +1,10 @@
-import { Test } from "../roadmap/RoadMap.tsx";
+import { RoadMap } from "../roadmap/RoadMap.tsx";
 
 export function Algorithms() {
   return (
     <div>
       <h1>Algorithms</h1>
-      <Test />
+      <RoadMap />
     </div>
   );
 }
