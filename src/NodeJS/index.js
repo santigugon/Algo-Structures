@@ -1,30 +1,33 @@
 import { MongoClient } from "mongodb";
-import { startServer } from "./auth0.js";
-// Replace the uri string with your connection string.
+import express from "express";
+const app = express();
+
+// MongoDB setup
 const uri =
   "mongodb+srv://santigugon:s2ruXGEIFDYQ6oJg@supereasycluster.lzb2ugu.mongodb.net/";
-
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-async function run() {
+// Express route
+app.get("/", async (req, res) => {
   try {
     await client.connect();
-
     const database = client.db("algoStructures");
-    const movies = database.collection("accounts");
-
-    // Query for a movie that has the title 'Back to the Future'
-    const movie = await movies.find().toArray();
-
-    console.log(movie);
+    const accounts = database.collection("accounts");
+    const accountData = await accounts.find().toArray();
+    res.json(accountData);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error occurred while fetching data");
   } finally {
-    // Ensures that the client will close when you finish/error
     await client.close();
   }
-}
+});
 
-run().catch(console.dir);
-startServer();
+// Start the Express server
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

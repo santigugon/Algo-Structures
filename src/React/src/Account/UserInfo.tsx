@@ -1,0 +1,23 @@
+import { useAuth0 } from "@auth0/auth0-react";
+
+const Profile = () => {
+  const { user, isAuthenticated, isLoading } = useAuth0();
+  console.log("Authenticated:", isAuthenticated);
+  console.log("User:", user);
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
+
+  return (
+    isAuthenticated && (
+      <div>
+        <img src={user?.picture} alt={user?.name} />
+        <h2>{user?.name} NO?</h2>
+        <p>{user?.email}</p>
+        <p>{user?.uniqueId}</p>
+      </div>
+    )
+  );
+};
+
+export default Profile;
