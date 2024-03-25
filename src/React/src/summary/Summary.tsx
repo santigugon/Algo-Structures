@@ -26,6 +26,7 @@ export function Summary({
       <div className="nes-container is-rounded">
         <img src={portrait} alt="" style={{ maxWidth: "100%" }} />
       </div>
+
       <div className="nes-container is-rounded">
         <p>{description1}</p>
         <img src={imgSrc1} alt="" />

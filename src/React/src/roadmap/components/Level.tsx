@@ -116,7 +116,10 @@ export function Level({ img, name, relevance }: LevelProps) {
             </li>
           ))}
         </ul>
-        <div className="nes-container is-rounded is-dark">
+        <div
+          className="nes-container is-rounded is-dark"
+          style={{ borderRadius: "20%" }}
+        >
           <p
             style={{
               fontSize: `${relevance * 0.5}em`,

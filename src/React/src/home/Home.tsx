@@ -1,5 +1,7 @@
 import { Summary } from "./Components/Presentation.tsx";
 import { Intro } from "./Components/Intro.tsx";
+import LoginButton from "../Account/LoginButton.tsx";
+import LogoutButton from "../Account/LogOutButton.tsx";
 // import { CreatorCard } from "../extra/creatorCard.tsx";
 // import { VisualIntro } from "./Components/visualIntro.tsx";
 
@@ -34,6 +36,8 @@ export function Home() {
     <>
       <Intro />
       <Summary />
+      <LoginButton />
+      <LogoutButton />
       {/* <CreatorCard creators={creators} /> */}
       {/* <div className="under-construction">
         Currently under construction await for the official Launch in March 2024

@@ -5,9 +5,9 @@ export function RoadMap() {
   return (
     <>
       <div className="roadMap-body">
-        <h1>Algo-Structures</h1>
+        <h1 style={{ color: "black" }}>Algo-Structures</h1>
         <div className="title">
-          <h1>Algorithms</h1>
+          <h1 style={{ color: "black" }}>Algorithms</h1>
         </div>
         <div className="roadMap-gallery">
           <Level
