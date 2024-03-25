@@ -1,7 +1,7 @@
 import { Summary } from "./Components/Presentation.tsx";
 import { Intro } from "./Components/Intro.tsx";
 import LoginButton from "../Account/LoginButton.tsx";
-import LogoutButton from "../Account/LogOutButton.tsx";
+import LogoutButton from "../Account/LogoutButton.tsx";
 import { useEffect } from "react";
 import Profile from "../Account/UserInfo.tsx";
 // import { CreatorCard } from "../extra/creatorCard.tsx";
