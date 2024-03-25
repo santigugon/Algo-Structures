@@ -351,3 +351,6 @@ button:hover {
   object-position: start;
 }
 
+a {
+  color: black !important;
+}

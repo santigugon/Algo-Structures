@@ -12,7 +12,7 @@ export function RoadMap() {
         <div className="roadMap-gallery">
           <Level
             name="MergeSort"
-            img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
+            img="https://willrosenbaum.com/assets/img/2022f-cosc-311/merge-sort.gif"
             relevance={1}
           />
           <Level
@@ -32,7 +32,7 @@ export function RoadMap() {
           />
           <Level
             name="MergeSort"
-            img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
+            img="https://willrosenbaum.com/assets/img/2022f-cosc-311/merge-sort.gif"
             relevance={3}
           />
           <Level

@@ -5,6 +5,7 @@ interface SummaryProps {
   description2: string;
   imgSrc1: string;
   imgSrc2: string;
+  portrait: string;
 }
 
 export function Summary({
@@ -14,12 +15,16 @@ export function Summary({
   description2,
   imgSrc1,
   imgSrc2,
+  portrait,
 }: SummaryProps) {
   return (
     <>
       <div className="nes-container with-title is-centered">
         <p className="title">{title}</p>
         <p>{summary}</p>
+      </div>
+      <div className="nes-container is-rounded">
+        <img src={portrait} alt="" style={{ maxWidth: "100%" }} />
       </div>
       <div className="nes-container is-rounded">
         <p>{description1}</p>

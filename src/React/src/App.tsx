@@ -25,6 +25,7 @@ function App() {
               description2="Example example example"
               imgSrc1="/img/algorithms/mergesort.png"
               imgSrc2="/img/algorithms/mergesort.png"
+              portrait="https://willrosenbaum.com/assets/img/2022f-cosc-311/merge-sort.gif"
             />
           }
         />
