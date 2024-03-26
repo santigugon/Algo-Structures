@@ -1,11 +1,10 @@
 import { RoadMap } from "../roadmap/RoadMap.tsx";
-import FetchAlgorithms from "../fetching/FetchAlgorithms.tsx";
+import FetchAlgorithms from "../fetching/FetchAlgorithms.ts";
 
 export function Algorithms() {
   return (
     <div>
-      <RoadMap />
-      <FetchAlgorithms />
+      <RoadMap data={FetchAlgorithms()} />
     </div>
   );
 }

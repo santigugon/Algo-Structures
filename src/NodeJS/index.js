@@ -1,5 +1,7 @@
 import { MongoClient } from "mongodb";
 import express from "express";
+import { getAlgorithmsDS } from "./algorithmsDS.js";
+
 const app = express();
 
 // MongoDB setup
@@ -10,20 +12,22 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true,
 });
 
-// Express route
-app.get("/", async (req, res) => {
+const startDatabase = async () => {
   try {
     await client.connect();
-    const database = client.db("algoStructures");
-    const accounts = database.collection("accounts");
-    const accountData = await accounts.find().toArray();
-    res.json(accountData);
+    console.log("Connected to the database");
+    return client.db("algoStructures");
   } catch (error) {
     console.error(error);
-    res.status(500).send("Error occurred while fetching data");
-  } finally {
-    await client.close();
   }
+};
+
+const database = startDatabase();
+
+// Express route
+app.get("/algorithms", async (req, res) => {
+  const db = await database;
+  getAlgorithmsDS(db)(req, res);
 });
 
 // Start the Express server

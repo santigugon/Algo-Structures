@@ -4,9 +4,11 @@ interface LevelProps {
   img: string;
   name: string;
   relevance: number;
+  data: object;
+  category: string;
 }
 
-export function Level({ img, name, relevance }: LevelProps) {
+export function Level({ img, name, relevance, data, category }: LevelProps) {
   const height = 50;
   const width = 70;
 
@@ -14,7 +16,11 @@ export function Level({ img, name, relevance }: LevelProps) {
   const randomAlignment =
     alignments[Math.floor(Math.random() * alignments.length)];
   return (
-    <Link to={`/summary`} className={`container-roadmap ${randomAlignment}`}>
+    <Link
+      to="/summary"
+      state={{ data: data, category: category }}
+      className={`container-roadmap ${randomAlignment}`}
+    >
       <>
         <ul
           className="ul-roadmap "
