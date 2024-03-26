@@ -11,9 +11,8 @@ export function DescriptionSummary({
 }: DescriptionProps) {
   return (
     <div
+      className="centered-div"
       style={{
-        alignItems: "center",
-        display: "flex",
         justifyContent: position % 2 == 0 ? "flex-start" : "flex-end",
         flexDirection: position % 2 == 0 ? "row" : "row-reverse",
       }}
@@ -32,10 +31,8 @@ export function DescriptionSummary({
       <div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div
-            className="nes-container is-rounded"
+            className="nes-container is-rounded centered-div"
             style={{
-              display: "flex",
-              justifyContent: "center",
               margin: "1rem",
               width: "fit-content",
             }}

@@ -354,3 +354,9 @@ button:hover {
 a {
   color: black !important;
 }
+
+.centered-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

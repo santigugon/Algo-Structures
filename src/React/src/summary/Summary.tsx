@@ -14,6 +14,7 @@ import { useLocation } from "react-router-dom";
 import { TitleSummary } from "./components/TitleSummary.tsx";
 import { DescriptionSummary } from "./components/DescriptionSummary.tsx";
 import { AlgoComplexity } from "./components/AlgorithmsComplexity.tsx";
+import { DifficultySummary } from "./components/DifficultySummary.tsx";
 
 export function Summary() {
   const location = useLocation();
@@ -90,6 +91,7 @@ export function Summary() {
           stable={information?.getStable() || false}
         />
       ) : null}
+      <DifficultySummary difficulty={information?.getRelevance() || 0} />
       {/* <div className="nes-container with-title is-centered">
         <p className="title">{title}</p>
         <p>{summary}</p>

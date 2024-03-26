@@ -12,11 +12,8 @@ export function AlgoComplexity({
   stable,
 }: AlgoComplexityProps) {
   return (
-    <>
-      <div
-        className="nes-container with-title is-centered"
-        style={{ display: "flex", justifyContent: "center" }}
-      >
+    <div style={{ margin: "2rem" }}>
+      <div className="nes-container with-title is-centered centered-div">
         <p className="title">Time complexity</p>
         <div className="nes-table-responsive">
           <table className="nes-table is-bordered is-centered">
@@ -35,10 +32,7 @@ export function AlgoComplexity({
           </table>
         </div>
       </div>
-      <div
-        className="nes-container with-title is-centered"
-        style={{ display: "flex", justifyContent: "center" }}
-      >
+      <div className="nes-container with-title is-centered centered-div">
         <p className="title">Stability & More</p>
         <div className="nes-table-responsive">
           <table className="nes-table is-bordered is-centered">
@@ -57,6 +51,6 @@ export function AlgoComplexity({
           </table>
         </div>
       </div>
-    </>
+    </div>
   );
 }
