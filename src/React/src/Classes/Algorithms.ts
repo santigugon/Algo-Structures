@@ -1,6 +1,6 @@
-import { algoDS } from "./AlgoDS.ts";
+import { AlgoDS } from "./AlgoDS.ts";
 
-export class Algorithm extends algoDS {
+export class Algorithm extends AlgoDS {
   inPlace: boolean;
   stable: boolean;
   avgTimeComplexity: string;

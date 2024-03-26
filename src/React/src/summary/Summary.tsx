@@ -8,8 +8,12 @@
 //   inPlace: boolean;
 //   stable: boolean;
 // }
+import { AlgoDS } from "../Classes/AlgoDS.ts";
 import { Algorithm } from "../Classes/Algorithms.ts";
 import { useLocation } from "react-router-dom";
+import { TitleSummary } from "./components/TitleSummary.tsx";
+import { DescriptionSummary } from "./components/DescriptionSummary.tsx";
+import { AlgoComplexity } from "./components/AlgorithmsComplexity.tsx";
 
 export function Summary() {
   const location = useLocation();
@@ -17,6 +21,7 @@ export function Summary() {
     category: string;
   };
   console.log(category);
+  let information = new AlgoDS("", 0, "", "", [], [], "");
   if (category === "algorithm") {
     const { data } = location.state as {
       data: {
@@ -46,7 +51,7 @@ export function Summary() {
       inPlace,
       stable,
     } = data;
-    const information = new Algorithm(
+    information = new Algorithm(
       name,
       relevance,
       category,
@@ -63,13 +68,33 @@ export function Summary() {
   }
   return (
     <>
+      <TitleSummary
+        title={information?.getName() || ""}
+        summary={information?.getSummary() || ""}
+        portrait={information?.getPortrait() || ""}
+      />
+      {information?.getDescriptions().map((description, index) => {
+        return (
+          <DescriptionSummary
+            description={description}
+            imgSrc={information?.getImgSrcs()[index] || ""}
+            position={index}
+          />
+        );
+      })}
+      {information instanceof Algorithm ? (
+        <AlgoComplexity
+          avgTimeComplexity={information?.getAvgTimeComplexity() || ""}
+          worstTimeComplexity={information?.getWorstTimeComplexity() || ""}
+          inPlace={information?.getInPlace() || false}
+          stable={information?.getStable() || false}
+        />
+      ) : null}
       {/* <div className="nes-container with-title is-centered">
         <p className="title">{title}</p>
         <p>{summary}</p>
       </div>
-      <div className="nes-container is-rounded">
-        <img src={portrait} alt="" style={{ maxWidth: "100%" }} />
-      </div>
+     
 
       <div className="nes-container is-rounded">
         <p>{description1}</p>

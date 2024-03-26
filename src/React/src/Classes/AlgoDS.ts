@@ -1,4 +1,4 @@
-export class algoDS {
+export class AlgoDS {
   name: string;
   relevance: number;
   category: string;
