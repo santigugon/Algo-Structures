@@ -1,5 +1,6 @@
 import "./roadmap.css";
 import { Level } from "./components/Level";
+import { VisualIntro } from "../home/Components/visualIntro";
 interface Algo {
   name: string;
   portrait: string;
@@ -19,7 +20,7 @@ export function RoadMap({ data }: RoadMapProps) {
   return (
     <>
       {data.isValidating ? (
-        <div className="Loading">Loading...</div>
+        <VisualIntro />
       ) : (
         !data.error && (
           <div className="roadMap-body">
@@ -40,37 +41,6 @@ export function RoadMap({ data }: RoadMapProps) {
                   />
                 );
               })}
-              {/*               
-              <Level
-                name="MergeSort"
-                img="https://willrosenbaum.com/assets/img/2022f-cosc-311/merge-sort.gif"
-                relevance={1}
-              />
-              <Level
-                name="MergeSort"
-                img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
-                relevance={2}
-              />
-              <Level
-                name="MergeSort"
-                img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
-                relevance={2}
-              />
-              <Level
-                name="MergeSort"
-                img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
-                relevance={1}
-              />
-              <Level
-                name="MergeSort"
-                img="https://willrosenbaum.com/assets/img/2022f-cosc-311/merge-sort.gif"
-                relevance={3}
-              />
-              <Level
-                name="MergeSort"
-                img="https://static.javatpoint.com/tutorial/daa/images/daa-merge-sort.png"
-                relevance={3}
-              /> */}
             </div>
           </div>
         )

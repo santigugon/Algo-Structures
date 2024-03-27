@@ -15,9 +15,12 @@ import { TitleSummary } from "./components/TitleSummary.tsx";
 import { DescriptionSummary } from "./components/DescriptionSummary.tsx";
 import { AlgoComplexity } from "./components/AlgorithmsComplexity.tsx";
 import { DifficultySummary } from "./components/DifficultySummary.tsx";
+import { AnimationGif } from "./components/TheoryWin.tsx";
+import { useState } from "react";
 
 export function Summary() {
   const location = useLocation();
+  const [showGif, setShowGif] = useState(false);
   const { category } = location.state as {
     category: string;
   };
@@ -69,6 +72,7 @@ export function Summary() {
   }
   return (
     <>
+      {showGif ? <AnimationGif /> : null}
       <TitleSummary
         title={information?.getName() || ""}
         summary={information?.getSummary() || ""}
@@ -92,6 +96,19 @@ export function Summary() {
         />
       ) : null}
       <DifficultySummary difficulty={information?.getRelevance() || 0} />
+      <button
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+          setShowGif(true);
+        }}
+        type="button"
+        className="nes-btn is-success"
+      >
+        End level
+      </button>
       {/* <div className="nes-container with-title is-centered">
         <p className="title">{title}</p>
         <p>{summary}</p>

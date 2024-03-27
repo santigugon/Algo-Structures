@@ -22,7 +22,7 @@ export const Intro: React.FC = () => {
     <div className="intro-container">
       <div className="background-image"></div>
       <div className="intro-text">
-        <h1>ALGOSTRUCTURESSSS</h1>
+        <h1>ALGOSTRUCTURES</h1>
         <br />
         <h2>Algorithms & Data Structures</h2>
       </div>
