@@ -35,7 +35,7 @@ export function AnimationGif() {
         >
           <img
             style={{ width: "100%" }}
-            src="/src/assets/imgs/theorywin-resized.gif"
+            src="/src/assets/imgs/theoryWin.gif"
             alt=""
           />
         </div>
