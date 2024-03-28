@@ -1,0 +1,3 @@
+function Quizz(id: string){
+    
+};
