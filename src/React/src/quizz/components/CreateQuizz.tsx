@@ -1,22 +1,30 @@
-import { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
 
-function QuestionForm() {
-  const [description, setDescription] = useState("");
-  const [alternatives, setAlternatives] = useState([
+interface Alternative {
+  text: string;
+  isCorrect: boolean;
+}
+
+export const CreateQuizz: React.FC = () => {
+  const [description, setDescription] = useState<string>("");
+  const [alternatives, setAlternatives] = useState<Alternative[]>([
     { text: "", isCorrect: false },
   ]);
-  const [idDSA, setIdDSA] = useState("");
+  const [idDSA, setIdDSA] = useState<string>("");
 
-  const handleDescriptionChange = (e) => {
-    setDescription(e.target.value);
+  const handleDescriptionChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setDescription(event.target.value);
   };
 
-  const handleIdDSAChange = (e) => {
-    setIdDSA(e.target.value);
+  const handleIdDSAChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setIdDSA(event.target.value);
   };
 
-  const handleAlternativeTextChange = (index, event) => {
+  const handleAlternativeTextChange = (
+    index: number,
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
     const newAlternatives = alternatives.map((alternative, altIndex) => {
       if (index !== altIndex) return alternative;
       return { ...alternative, text: event.target.value };
@@ -25,7 +33,10 @@ function QuestionForm() {
     setAlternatives(newAlternatives);
   };
 
-  const handleAlternativeIsCorrectChange = (index, event) => {
+  const handleAlternativeIsCorrectChange = (
+    index: number,
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
     const newAlternatives = alternatives.map((alternative, altIndex) => {
       if (index !== altIndex) return alternative;
       return { ...alternative, isCorrect: event.target.checked };
@@ -34,8 +45,8 @@ function QuestionForm() {
     setAlternatives(newAlternatives);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
     try {
       const response = await axios.post("http://localhost:3000/questions", {
@@ -51,7 +62,7 @@ function QuestionForm() {
   };
 
   const addAlternative = () => {
-    setAlternatives(alternatives.concat([{ text: "", isCorrect: false }]));
+    setAlternatives([...alternatives, { text: "", isCorrect: false }]);
   };
 
   return (
@@ -101,6 +112,4 @@ function QuestionForm() {
       <button type="submit">Submit Question</button>
     </form>
   );
-}
-
-export default QuestionForm;
+};

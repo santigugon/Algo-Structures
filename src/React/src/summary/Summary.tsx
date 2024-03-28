@@ -24,11 +24,12 @@ export function Summary() {
   const { category } = location.state as {
     category: string;
   };
-  console.log(category);
+  let id = "-1";
   let information = new AlgoDS("", 0, "", "", [], [], "");
   if (category === "algorithm") {
     const { data } = location.state as {
       data: {
+        _id: string;
         name: string;
         relevance: number;
         category: string;
@@ -42,6 +43,8 @@ export function Summary() {
         stable: boolean;
       };
     };
+
+    id = data?._id;
     const {
       name,
       relevance,
@@ -109,12 +112,16 @@ export function Summary() {
       >
         End level
       </button>
-      <Link to="/quizz" state={information}>
+      <Link to={`/quizz/${id}`}>
         <a className="nes-btn" href="#">
           Normal
         </a>
       </Link>
-      
+      <Link to="/createQuizz" state={information}>
+        <a className="nes-btn" href="#">
+          Normal
+        </a>
+      </Link>
     </>
   );
 }

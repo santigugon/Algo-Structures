@@ -5,30 +5,21 @@ import { NavMenu } from "./menus/Nav.tsx";
 import { Algorithms } from "./algorithms/Algorithms.tsx";
 import { Home } from "./home/Home.tsx";
 import { Summary } from "./summary/Summary.tsx";
+import { CreateQuizz } from "./quizz/components/CreateQuizz.tsx";
+import { Quizz } from "./quizz/Quizz.tsx";
 
 function App() {
   return (
     <BrowserRouter>
       <NavMenu />
       <Routes>
+        {/* Define a default route using Navigate */}
         <Route path="/home" element={<Home />} />
         <Route path="/algorithms" element={<Algorithms />} />
-        {/* Define a default route using Navigate */}
+        <Route path="/createQuiz" element={<CreateQuizz />} />
+        <Route path="/quizz/:id" element={<Quizz />} />
         <Route path="/" element={<Navigate to="/home" />} />
-        <Route
-          path="/summary"
-          element={
-            <Summary
-              title="MergeSort"
-              summary="MergeSort is a sorting algorithm"
-              description1="Example example example"
-              description2="Example example example"
-              imgSrc1="/img/algorithms/mergesort.png"
-              imgSrc2="/img/algorithms/mergesort.png"
-              portrait="https://willrosenbaum.com/assets/img/2022f-cosc-311/merge-sort.gif"
-            />
-          }
-        />
+        <Route path="/summary" element={<Summary />} />
       </Routes>
     </BrowserRouter>
   );
