@@ -1,4 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 interface Alternative {
@@ -7,18 +8,14 @@ interface Alternative {
 }
 
 export const CreateQuizz: React.FC = () => {
+  const { idDSA } = useParams();
   const [description, setDescription] = useState<string>("");
   const [alternatives, setAlternatives] = useState<Alternative[]>([
     { text: "", isCorrect: false },
   ]);
-  const [idDSA, setIdDSA] = useState<string>("");
 
   const handleDescriptionChange = (event: ChangeEvent<HTMLInputElement>) => {
     setDescription(event.target.value);
-  };
-
-  const handleIdDSAChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setIdDSA(event.target.value);
   };
 
   const handleAlternativeTextChange = (
@@ -75,13 +72,6 @@ export const CreateQuizz: React.FC = () => {
             value={description}
             onChange={handleDescriptionChange}
           />
-        </label>
-      </div>
-
-      <div>
-        <label>
-          ID DSA:
-          <input type="text" value={idDSA} onChange={handleIdDSAChange} />
         </label>
       </div>
 

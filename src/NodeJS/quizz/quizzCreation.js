@@ -1,8 +1,8 @@
-import Question from "./schema.js";
 import express from "express";
 const router = express.Router();
+import Question from "./schema.js";
 
-export function createQuizzQuesiton() {
+function createQuizzQuestion() {
   router.post("/questions", async (req, res) => {
     try {
       const { description } = req.body;
@@ -22,14 +22,19 @@ export function createQuizzQuesiton() {
   });
 }
 
-export function getQuizzQuestions() {
-router.get("/questions/:idDSA", async (req, res) => {
+function getQuizzQuestions() {
+  router.get("/questions/:idDSA", async (req, res) => {
     try {
-        const { idDSA } = req.params;
-        const questions = await Question.find({ idDSA });
-        return res.status(200).json(questions);
+      const { idDSA } = req.params;
+      const questions = await Question.find({ idDSA });
+      return res.status(200).json(questions);
     } catch (error) {
-        return res.status(500).json({ error: error });
+      return res.status(500).json({ error: error });
     }
-});
+  });
 }
+
+createQuizzQuestion();
+getQuizzQuestions();
+
+export default router;

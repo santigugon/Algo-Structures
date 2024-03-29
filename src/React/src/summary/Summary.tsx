@@ -114,12 +114,12 @@ export function Summary() {
       </button>
       <Link to={`/quizz/${id}`}>
         <a className="nes-btn" href="#">
-          Normal
+          Quizz
         </a>
       </Link>
-      <Link to="/createQuizz" state={information}>
+      <Link to={`/createQuizz/${id}`}>
         <a className="nes-btn" href="#">
-          Normal
+          Create Quizz
         </a>
       </Link>
     </>

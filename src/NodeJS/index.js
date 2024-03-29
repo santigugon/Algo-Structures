@@ -2,6 +2,9 @@ import { MongoClient } from "mongodb";
 import express from "express";
 import { getAlgorithmsDS } from "./algorithmsDS.js";
 
+import mongoose from "mongoose";
+import quizzRouter from "./quizz/quizzCreation.js";
+
 const app = express();
 
 // MongoDB setup
@@ -16,20 +19,37 @@ const startDatabase = async () => {
   try {
     await client.connect();
     console.log("Connected to the database");
+
     return client.db("algoStructures");
   } catch (error) {
     console.error(error);
+    return ["null", "error"];
   }
 };
 
-const database = startDatabase();
+const startMongooseClient = async () => {
+  try {
+    const mongooseClient = await mongoose.connect(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("Connected to the mongoose database");
+    return mongooseClient;
+  } catch (error) {
+    console.error(error);
+    return ["null", "error"];
+  }
+};
+
+const database = await startDatabase();
+await startMongooseClient();
 
 // Express route
 app.get("/algorithms", async (req, res) => {
-  const db = await database;
+  const db = database;
   getAlgorithmsDS(db)(req, res);
 });
-
+app.use("/quizz", quizzRouter);
 // Start the Express server
 const PORT = 3000;
 app.listen(PORT, () => {
