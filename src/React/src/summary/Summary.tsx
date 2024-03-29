@@ -112,7 +112,7 @@ export function Summary() {
       >
         End level
       </button>
-      <Link to={`/quizz/${id}`}>
+      <Link to={`/quizz/${id}/${information?.getName() || ""}`}>
         <a className="nes-btn" href="#">
           Quizz
         </a>

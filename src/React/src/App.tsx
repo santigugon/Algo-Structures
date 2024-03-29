@@ -16,8 +16,8 @@ function App() {
         {/* Define a default route using Navigate */}
         <Route path="/home" element={<Home />} />
         <Route path="/algorithms" element={<Algorithms />} />
-        <Route path="/createQuizz/:id" element={<CreateQuizz />} />
-        <Route path="/quizz/:id" element={<Quizz />} />
+        <Route path="/createQuiz" element={<CreateQuizz />} />
+        <Route path="/quizz/:id/:title" element={<Quizz />} />
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/summary" element={<Summary />} />
       </Routes>
