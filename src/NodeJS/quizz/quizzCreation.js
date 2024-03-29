@@ -34,6 +34,10 @@ function getQuizzQuestions() {
   });
 }
 
+router.get("/example", (req, res) => {
+  res.send("Hello World!");
+});
+
 createQuizzQuestion();
 getQuizzQuestions();
 

@@ -8,7 +8,8 @@ interface Alternative {
 }
 
 export const CreateQuizz: React.FC = () => {
-  const { idDSA } = useParams();
+  const { id } = useParams();
+  const idDSA = id;
   const [description, setDescription] = useState<string>("");
   const [alternatives, setAlternatives] = useState<Alternative[]>([
     { text: "", isCorrect: false },

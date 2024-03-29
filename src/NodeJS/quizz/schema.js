@@ -13,12 +13,13 @@ const QuestionSchema = new mongoose.Schema({
         required: true,
         default: false,
       },
-      idDSA: {
-        type: String,
-        required: true,
-      },
     },
   ],
+  idDSA: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "DSA",
+    required: true,
+  },
 });
 
 export default mongoose.model("Question", QuestionSchema);
