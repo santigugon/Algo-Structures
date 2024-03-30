@@ -15,6 +15,18 @@ export function Level({ img, name, relevance, data, category }: LevelProps) {
   const alignments = ["align-start", "align-center", "align-end"];
   const randomAlignment =
     alignments[Math.floor(Math.random() * alignments.length)];
+
+  const backgroundImage =
+    relevance == 1
+      ? `url("/src/assets/imgs/map/house.avif")`
+      : relevance == 2
+      ? `url("/src/assets/imgs/map/tower.webp")`
+      : `url("/src/assets/imgs/map/castle.png")`;
+  document.documentElement.style.setProperty(
+    "--background-image",
+    `${backgroundImage}`
+  );
+
   return (
     <Link
       to="/summary"

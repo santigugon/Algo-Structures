@@ -34,8 +34,8 @@ export function Quizz() {
 
   return (
     <>
-      <h1> {title} Quiz</h1>
-      <section className="nes-container">
+      <h1 style={{ textAlign: "center" }}> {title} Quiz</h1>
+      <section className="nes-container" style={{ margin: "5px 15px" }}>
         {/* Assuming response.data is an array of questions */}
         {response.data.map((question: Question, index: number) => (
           <section key={index} className="message-list">
