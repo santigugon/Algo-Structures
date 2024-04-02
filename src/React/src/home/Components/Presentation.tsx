@@ -49,7 +49,7 @@ export function Summary() {
       <SectionsContainer />
       <AccountOverview />
       <footer>
-        <p>
+        <p style={{ fontSize: "12px" }}>
           Algostructures is a learning project no commercial use is intended.
         </p>
       </footer>

@@ -21,11 +21,6 @@ export function AccountOverview() {
           />
           <div className="info">
             <p className="item">{user?.nickname || ""}</p>
-            <progress
-              className="nes-progress is-success item"
-              value={50}
-              max="100"
-            ></progress>
 
             <span
               className={
@@ -36,9 +31,16 @@ export function AccountOverview() {
             >
               {user?.email_verified ? `Verified` : `Not verified` || ""}
             </span>
+            <div className="centered-div">
+              <LogoutButton />
+            </div>
           </div>
-          <div className="centered-div">
-            <LogoutButton />
+          <div className="centered-div thirty-width">
+            <progress
+              className="nes-progress is-success item"
+              value={50}
+              max="100"
+            ></progress>
           </div>
         </div>
       </>

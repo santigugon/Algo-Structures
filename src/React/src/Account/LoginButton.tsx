@@ -5,7 +5,12 @@ const LoginButton = () => {
 
   return (
     !isAuthenticated && (
-      <button onClick={() => loginWithRedirect()}>Log In</button>
+      <button
+        className="nes-btn is-primary"
+        onClick={() => loginWithRedirect()}
+      >
+        Log In
+      </button>
     )
   );
 };

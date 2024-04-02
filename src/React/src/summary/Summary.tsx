@@ -1,13 +1,4 @@
-// interface Algorithms {
-//   name: string;
-//   summary: string;
-//   descriptions: string[];
-//   imgSrcs: string[];
-//   portrait: string;
-//   timeComplexity: string;
-//   inPlace: boolean;
-//   stable: boolean;
-// }
+import { useAuth0 } from "@auth0/auth0-react";
 import { AlgoDS } from "../Classes/AlgoDS.ts";
 import { Algorithm } from "../Classes/Algorithms.ts";
 import { Link, useLocation } from "react-router-dom";
@@ -25,6 +16,8 @@ export function Summary() {
   const { category } = location.state as {
     category: string;
   };
+  const { user, isAuthenticated, isLoading } = useAuth0();
+  console.log("user:", user);
   let id = "-1";
   let information = new AlgoDS("", 0, "", "", [], [], "");
   if (category === "algorithm") {
@@ -100,35 +93,47 @@ export function Summary() {
         />
       ) : null}
       <DifficultySummary difficulty={information?.getRelevance() || 0} />
-      <button
-        onClick={() => {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-          setShowGif(true);
-        }}
-        type="button"
-        className="nes-btn is-success"
-      >
-        End level
-      </button>
-      <Link to={`/quizz/${id}/${information?.getName() || ""}`}>
-        <a className="nes-btn" href="#">
-          Quizz
-        </a>
-      </Link>
-      <Link to={`/createQuizz/${id}`}>
-        <a className="nes-btn" href="#">
-          Create Quizz
-        </a>
-      </Link>
-      <Link to={`/createChallenge/${id}`}>
-        <a className="nes-btn is-primary" href="#">
-          Create Challenge
-        </a>
-      </Link>
-
+      <div className="centered-div margin-20">
+        <button
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+            setShowGif(true);
+          }}
+          type="button"
+          className="nes-btn is-success"
+        >
+          End level
+        </button>
+      </div>
+      <div className="centered-div margin-20 gap-20">
+        <Link to={`/quizz/${id}/${information?.getName() || ""}`}>
+          <a className="nes-btn" href="#">
+            Quizz
+          </a>
+        </Link>
+        {isLoading ? (
+          <div>Loading ...</div>
+        ) : (
+          isAuthenticated &&
+          user?.sub === "google-oauth2|102999660416873520506" && (
+            <>
+              <Link to={`/createQuizz/${id}`}>
+                <a className="nes-btn" href="#">
+                  Create Quizz
+                </a>
+              </Link>
+              <Link to={`/createChallenge/${id}`}>
+                <a className="nes-btn is-primary" href="#">
+                  Create Challenge
+                </a>
+              </Link>
+            </>
+          )
+        )}
+      </div>
       <div style={{ margin: "20px" }}>
         <CodingChallenges id={id} />
       </div>
