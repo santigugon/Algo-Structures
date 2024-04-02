@@ -8,6 +8,7 @@ import { Summary } from "./summary/Summary.tsx";
 import { CreateQuizz } from "./quizz/components/CreateQuizz.tsx";
 import { Quizz } from "./quizz/Quizz.tsx";
 import { CreateChallenge } from "./challenges/components/CreateChallenge.tsx";
+import PageNotFound from "./extra/PageNotFound.tsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/createChallenge/:id" element={<CreateChallenge />} />
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/summary" element={<Summary />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
