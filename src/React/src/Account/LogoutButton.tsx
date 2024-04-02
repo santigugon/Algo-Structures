@@ -6,6 +6,7 @@ const LogoutButton = () => {
   return (
     isAuthenticated && (
       <button
+        className="nes-btn is-warning "
         onClick={() =>
           logout({ logoutParams: { returnTo: window.location.origin } })
         }

@@ -13,7 +13,7 @@ export function Summary() {
         never before.
       </p>
       <div className="presentation-bulletpoints">
-        <ul>
+        <ul className="nes-list is-disc">
           <li>Learn through Play</li>
           <li>
             Dive into lessons that demystify algorithms and data structures.

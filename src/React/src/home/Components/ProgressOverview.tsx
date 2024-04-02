@@ -20,44 +20,47 @@ export function SectionCard({
 }: SectionCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <Link to={`/algorithms`}>
-      <div
-        className={`card ${locked ? "locked" : ""} ${
-          isHovered ? " hovered" : ""
-        } ${title === "Big O Notation" ? "big-o-notation" : ""}`}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        {locked ? (
-          <div className="lock-icon">
-            <img src="/img/icons/lock-icon.png" alt="lock" />
-          </div>
-        ) : (
-          ""
-        )}
-        <h3>
-          <title></title>
-        </h3>
-        <div className="sectionImage-container">
-          <img className={`sectionImage `} src={imgSrc} alt={title} />
+    <div
+      className={`card ${locked ? "locked" : ""} ${
+        isHovered ? " hovered" : ""
+      } ${title === "Big O Notation" ? "big-o-notation" : ""} `}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {locked ? (
+        <div className="lock-icon">
+          <img src="/img/icons/lock-icon.png" alt="lock" />
         </div>
-        <p>{description}</p>
-        <h5>Your progress:{progress}%</h5>
-        <progress
-          className={`nes-progress ${
-            progress > 90
-              ? "is-success"
-              : progress > 50
-              ? "is-warning"
-              : "is-error"
-          }`}
-          value={progress}
-          max="100"
-        ></progress>
-
-        <button onClick={onClick}>Click Me</button>
+      ) : (
+        ""
+      )}
+      <h3>{title}</h3>
+      <div className="sectionImage-container">
+        <img className={`sectionImage `} src={imgSrc} alt={title} />
       </div>
-    </Link>
+      <p>{description}</p>
+      <h5>Your progress:{progress}%</h5>
+      <progress
+        className={`nes-progress ${
+          progress > 90
+            ? "is-success"
+            : progress > 50
+            ? "is-warning"
+            : "is-error"
+        }`}
+        value={progress}
+        max="100"
+      ></progress>
+
+      <Link to={`/algorithms`}>
+        <button
+          className={locked ? `nes-btn is-disabled` : `nes-btn is-primary`}
+          onClick={onClick}
+        >
+          Click Me
+        </button>
+      </Link>
+    </div>
   );
 }
 
@@ -72,11 +75,11 @@ export function SectionsContainer() {
           onClick={function () {
             console.log("Clicked");
           }}
-          locked={true}
+          locked={false}
           imgSrc="/img/portraits/algorithms.png"
         />
         <SectionCard
-          title="Algorithms"
+          title="Data Structures"
           description="Learn about the most important data structures, from arrays to binary search trees"
           progress={70}
           onClick={function () {
@@ -86,8 +89,8 @@ export function SectionsContainer() {
           imgSrc="/img/portraits/datastructure.png"
         />
         <SectionCard
-          title="Algorithms"
-          description=" the most interesting algorithms, from searching to sorting"
+          title="Roadmap"
+          description=" Follow a Roadmap to become a better programmer and learn about the most important concepts in computer science."
           progress={30}
           onClick={function () {
             console.log("Clicked");
