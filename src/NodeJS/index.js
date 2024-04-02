@@ -2,6 +2,7 @@ import { MongoClient } from "mongodb";
 import express from "express";
 import { getAlgorithmsDS } from "./algorithmsDS.js";
 import Question from "./quizz/schema.js";
+import Challenge from "./challenges/schema.js";
 import mongoose from "mongoose";
 import quizzRouter from "./quizz/quizzCreation.js";
 
@@ -83,6 +84,32 @@ app.post("/questions", async (req, res) => {
     return res.status(200).json(question);
   } catch (error) {
     return res.status(500).json({ error: error });
+  }
+});
+
+app.get("/challenges/:idDSA", async (req, res) => {
+  try {
+    const { idDSA } = req.params;
+    const challenges = await Challenge.find({ idDSA });
+    return res.status(200).json(challenges);
+  } catch (error) {
+    return res.status(500).json({ error: error });
+  }
+});
+
+app.post("/challenges", async (req, res) => {
+  try {
+    const { title, url, idDSA } = req.body; // You can destructure these in one line
+
+    const challenge = await Challenge.create({
+      title,
+      url,
+      idDSA,
+    });
+
+    return res.status(201).json(challenge);
+  } catch (error) {
+    return res.status(500).json({ error: "error" });
   }
 });
 

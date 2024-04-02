@@ -17,6 +17,7 @@ import { AlgoComplexity } from "./components/AlgorithmsComplexity.tsx";
 import { DifficultySummary } from "./components/DifficultySummary.tsx";
 import { AnimationGif } from "./components/TheoryWin.tsx";
 import { useState } from "react";
+import { CodingChallenges } from "../challenges/CodingChallenges.tsx";
 
 export function Summary() {
   const location = useLocation();
@@ -122,6 +123,15 @@ export function Summary() {
           Create Quizz
         </a>
       </Link>
+      <Link to={`/createChallenge/${id}`}>
+        <a className="nes-btn is-primary" href="#">
+          Create Challenge
+        </a>
+      </Link>
+
+      <div style={{ margin: "20px" }}>
+        <CodingChallenges id={id} />
+      </div>
     </>
   );
 }
