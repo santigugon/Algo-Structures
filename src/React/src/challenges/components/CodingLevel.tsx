@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 interface CodingLevelProps {
   title: string;
   url: string;
@@ -5,16 +6,29 @@ interface CodingLevelProps {
 }
 
 export function CodingLevel({ title, url, completed }: CodingLevelProps) {
+  const [checkbox, setCheckBox] = useState(completed);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCheckBox(e.target.checked);
+    // You can also perform other actions on change here
+  };
   return (
     <>
       <div
         className="nes-container"
-        style={{ display: "flex", justifyContent: "space-between" }}
+        style={{
+          margin: "10px",
+        }}
       >
-        <label>
-          <input type="checkbox" className="nes-checkbox" checked={completed} />
+        <label style={{ display: "flex", justifyContent: "space-around" }}>
+          <input
+            onChange={handleChange}
+            type="checkbox"
+            className="nes-checkbox"
+            checked={checkbox}
+          />
           <span>{title}</span>
-          <a href={url} target="_blank">
+          <a href={url} target="_blank" rel="noreferrer noopener">
             <i className="nes-logo"></i>
           </a>
         </label>
